@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('535311656564482308d8d7b6525483ad');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: AIN COMPANY',
+        description: '주식회사 아인기획',
+        imageUrl:
+          'https://static.wixstatic.com/media/5ff207_fe0c27809e9e42c5971eb966b1d887d9~mv2.jpg/v1/fill/w_980,h_492,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5ff207_fe0c27809e9e42c5971eb966b1d887d9~mv2.jpg',
+        link: {
+          mobileWebUrl: 'https://hapykwak91.wixsite.com/my-site/%EB%B3%B5%EC%A0%9C-%EB%B2%95%EB%AC%B4-%EC%B9%B4%ED%8E%98%ED%85%8C%EB%A6%AC%EC%95%84',
+          webUrl: 'https://hapykwak91.wixsite.com/my-site/%EB%B3%B5%EC%A0%9C-%EB%B2%95%EB%AC%B4-%EC%B9%B4%ED%8E%98%ED%85%8C%EB%A6%AC%EC%95%84',
+        },
+      },
+      social: {
+        likeCount: 좋아요 수, //99999가 최대입니다
+        commentCount: 댓글 수, //99999가 최대입니다
+        sharedCount: 공유 수, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '자세히 보기',
+          link: {
+            mobileWebUrl: 'https://hapykwak91.wixsite.com/my-site/%EB%B3%B5%EC%A0%9C-%EB%B2%95%EB%AC%B4-%EC%B9%B4%ED%8E%98%ED%85%8C%EB%A6%AC%EC%95%84',
+            webUrl: 'https://hapykwak91.wixsite.com/my-site/%EB%B3%B5%EC%A0%9C-%EB%B2%95%EB%AC%B4-%EC%B9%B4%ED%8E%98%ED%85%8C%EB%A6%AC%EC%95%84',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
